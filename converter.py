@@ -19,6 +19,9 @@ def binary_to_decimal():
 def clear_output():
     output_label.config(text="")
 
+def convert():
+    decimal_to_binary()  
+
 root = tk.Tk()
 root.title("Binary-Decimal Converter")
 
@@ -37,7 +40,7 @@ clear_button.pack()
 input_field = tk.Entry(root)
 input_field.pack()
 
-convert_button = tk.Button(root, text="Convert", command=lambda: None)  # Placeholder for now
+convert_button = tk.Button(root, text="Convert", command=convert)
 convert_button.pack()
 
 output_label = tk.Label(root, text="", pady=10)
